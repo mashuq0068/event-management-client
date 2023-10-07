@@ -43,7 +43,7 @@ const Banner = () => {
         {/* div */}
         <div className="space-y-7 ">
             <div className=" font-bold text-5xl   ">
-            Best Event Management Company
+            Best  Corporate Event Management Company
             </div>
             <button className="text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border  border-purple-500  rounded-xl font-semibold text-xl bg-white px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r from-[#e944d3] to-[#25baff]  before:transition-all before:duration-100 hover:text-black hover:border-none hover:before:left-0 hover:shadow-purple-500 hover:before:w-full"><span className="relative z-10  ">Get-started</span></button>
         </div>
