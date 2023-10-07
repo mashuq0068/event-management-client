@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import { useContext } from "react";
@@ -6,11 +6,16 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 
 
+
 const Login = () => {
+  const location = useLocation()
+ console.log(location)
+  const navigate = useNavigate()
     const { 
         loginUser,
         userWithGoogle,
         userWithGithub,} =useContext(AuthContext)
+        
 
     
     const handleSubmit =(e) => {
@@ -21,6 +26,9 @@ const Login = () => {
         loginUser(email,password)
         .then(data => {
             console.log(data)
+            navigate(location?.state ? location.state: "/")
+
+            
            
         })
         .catch(error => {
@@ -35,6 +43,7 @@ const Login = () => {
         userWithGoogle()
         .then(data => {
             console.log(data)
+            navigate(location?.state ? location.state: "/")
         })
         .catch(error => {
             toast.error(error.code)
@@ -45,6 +54,7 @@ const Login = () => {
         userWithGithub()
         .then(data => {
             console.log(data)
+            navigate(location?.state ? location.state: "/")
         })
         .catch(error => {
             toast.error(error.code)

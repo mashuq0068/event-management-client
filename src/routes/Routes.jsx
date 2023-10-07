@@ -4,6 +4,8 @@ import HomePage from "../Pages/HomePage/HomePage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegistrationPage from "../Pages/RegistrationPage/RegistrationPage";
+import DetailsPage from "../Pages/DetailsPage/DetailsPage";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -23,6 +25,12 @@ const router = createBrowserRouter([
         {
             path:'/registration',
             element:<RegistrationPage></RegistrationPage>
+        },
+        {
+            path:'/details/:id',
+            element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
+            loader: ({params}) => fetch(`/services.json/${params.id}`)
+
         }
        ]
     }

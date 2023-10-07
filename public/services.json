@@ -1,47 +1,94 @@
 {
-    "events": [
-      {
-        "id":1,
-        "eventName": "Annual Business Conference",
-        "image": "https://vivauae.com/images/item/171/171074_corporate_event_management_companies_in_dubai_thb.jpg",
-        "price": "$299 per ticket",
-        "shortDescription": "Join us for our annual business conference, featuring industry experts and thought leaders."
-      },
-      {
-        "id":2,
-        "eventName": "Product Launch Expo",
-        "image": "https://www.event-hochiminhcity.com/images/service/DSC_493987.jpg",
-        "price": "$275 per person",
-        "shortDescription": "Be the first to see our latest product innovations at our exclusive product launch expo."
-      },
-      {
-        "id":3,
-        "eventName": "Team Building Workshop",
-        "image": "https://www.pingpongmoments.in/blog/wp-content/uploads/2022/09/corporate-events-3.jpg",
-        "price": "$149 per person",
-        "shortDescription": "Enhance team collaboration and productivity with our interactive team building workshop."
-      },
-      {
-        "id":4,
-        "eventName": "Corporate Awards Gala",
-        "image": "https://idealwrite.com/wp-content/uploads/2020/07/Event-Management-company-name.jpg",
-        "price": "$499 per ticket",
-        "shortDescription": "Celebrate excellence in the corporate world at our prestigious awards gala."
-      },
-      {
-        "id":5,
-        "eventName": "Corporate Training Seminar",
-        "image": "https://eventmanagementcompany.weddingplannerskerala.com/wp-content/uploads/2018/07/30629782_1690372014342794_6207902449377452811_n.jpg",
-        "price": "$199 per attendee",
-        "shortDescription": "Gain valuable insights and skills at our corporate training seminar."
-      },
-      {
-        "id":6,
-        "eventName": "Networking Breakfast Meeting",
-        "image": "https://coreme.ae/img/Services/services-detail/3-2.jpg",
-        "price": "$29 per person",
-        "shortDescription": "Connect with industry professionals over breakfast at our networking meeting."
-      }
-    ]
-  }
-  
+  "events": [
+    {
+      "id": 1,
+      "eventName": "Annual Business Conference",
+      "image": "https://vivauae.com/images/item/171/171074_corporate_event_management_companies_in_dubai_thb.jpg",
+      "price": "$299 per ticket",
+      "shortDescription": "Join us for our annual business conference, featuring industry experts and thought leaders.",
+      "longDescription": "Our Annual Business Conference is the premier event for professionals in the corporate world. Over three days, you'll have the opportunity to hear from industry experts, network with peers, and gain valuable insights into the latest trends and strategies for success. Don't miss this chance to elevate your career and business.",
+      "date": "October 15-17, 2023",
+      "location": "New York City, NY",
+      "registrationDeadline": "October 1, 2023",
+      "eventType": "Conference",
+      "capacity": "500 attendees",
+      "agendaLink": "https://example.com/agenda/annual-conference",
+      "contactEmail": "info@example.com"
+    },
+    {
+      "id": 2,
+      "eventName": "Product Launch Expo",
+      "image": "https://www.event-hochiminhcity.com/images/service/DSC_493987.jpg",
+      "price": "$275 per person",
+      "shortDescription": "Be the first to see our latest product innovations at our exclusive product launch expo.",
+      "longDescription": "Join us at the Product Launch Expo to get an exclusive first look at our latest product innovations. This event is designed for product enthusiasts, industry professionals, and technology enthusiasts. Explore cutting-edge products, engage with our team, and be part of an exciting day of discovery.",
+      "date": "November 5, 2023",
+      "location": "San Francisco, CA",
+      "registrationDeadline": "October 25, 2023",
+      "eventType": "Product Launch",
+      "capacity": "300 attendees",
+      "agendaLink": "https://example.com/agenda/product-launch",
+      "contactEmail": "info@example.com"
+    },
+    {
+      "id": 3,
+      "eventName": "Team Building Workshop",
+      "image": "https://www.pingpongmoments.in/blog/wp-content/uploads/2022/09/corporate-events-3.jpg",
+      "price": "$149 per person",
+      "shortDescription": "Enhance team collaboration and productivity with our interactive team building workshop.",
+      "longDescription": "Our Team Building Workshop is a dynamic and engaging program designed to foster teamwork, improve communication, and boost productivity. Led by experienced facilitators, participants will take part in interactive activities, problem-solving challenges, and team-building exercises. Join us for a day of fun and learning.",
+      "date": "December 10, 2023",
+      "location": "Chicago, IL",
+      "registrationDeadline": "November 30, 2023",
+      "eventType": "Workshop",
+      "capacity": "100 attendees",
+      "agendaLink": "https://example.com/agenda/team-building-workshop",
+      "contactEmail": "info@example.com"
+    },
+    {
+      "id": 4,
+      "eventName": "Corporate Awards Gala",
+      "image": "https://idealwrite.com/wp-content/uploads/2020/07/Event-Management-company-name.jpg",
+      "price": "$499 per ticket",
+      "shortDescription": "Celebrate excellence in the corporate world at our prestigious awards gala.",
+      "longDescription": "The Corporate Awards Gala is a night to celebrate excellence in the corporate world. Join us for an evening of glamour, recognition, and inspiration. We will honor outstanding individuals and organizations for their achievements and contributions to the business community. Reserve your spot for a memorable night of celebration.",
+      "date": "February 18, 2024",
+      "location": "Los Angeles, CA",
+      "registrationDeadline": "February 1, 2024",
+      "eventType": "Awards Gala",
+      "capacity": "250 attendees",
+      "agendaLink": "https://example.com/agenda/awards-gala",
+      "contactEmail": "info@example.com"
+    },
+    {
+      "id": 5,
+      "eventName": "Corporate Training Seminar",
+      "image": "https://eventmanagementcompany.weddingplannerskerala.com/wp-content/uploads/2018/07/30629782_1690372014342794_6207902449377452811_n.jpg",
+      "price": "$199 per attendee",
+      "shortDescription": "Gain valuable insights and skills at our corporate training seminar.",
+      "longDescription": "Our Corporate Training Seminar is designed to equip professionals with valuable skills and knowledge for career growth. With expert speakers and interactive sessions, you'll gain insights into the latest industry trends and practical skills that can be applied immediately. Join us for a transformative learning experience.",
+      "date": "March 5-7, 2024",
+      "location": "Dallas, TX",
+      "registrationDeadline": "February 20, 2024",
+      "eventType": "Seminar",
+      "capacity": "200 attendees",
+      "agendaLink": "https://example.com/agenda/training-seminar",
+      "contactEmail": "info@example.com"
+    },
+    {
+      "id": 6,
+      "eventName": "Networking Breakfast Meeting",
+      "image": "https://coreme.ae/img/Services/services-detail/3-2.jpg",
+      "price": "$29 per person",
+      "shortDescription": "Connect with industry professionals over breakfast at our networking meeting.",
+      "longDescription": "Our Networking Breakfast Meeting provides a casual and productive environment for professionals to connect and build valuable relationships. Enjoy a delicious breakfast while engaging in meaningful conversations with industry peers. Expand your network and explore potential collaborations at this event.",
+      "date": "April 15, 2024",
+      "location": "Houston, TX",
+      "registrationDeadline": "April 1, 2024",
+      "eventType": "Networking",
+      "capacity": "150 attendees",
+      "agendaLink": "https://example.com/agenda/networking-meeting",
+      "contactEmail": "info@example.com"
+    }
+  ]
+}

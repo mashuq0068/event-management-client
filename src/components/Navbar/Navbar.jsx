@@ -1,11 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import {IoLogoTableau} from 'react-icons/io5'
+import {CgProfile} from 'react-icons/cg'
 import "../../index.css"
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 
 
 const Navbar = () => {
+  const {user , logOutUser} = useContext(AuthContext)
+  const handleSignOut = () => {
+    logOutUser()
+  }
+  console.log(user)
     const allLink = 
     <>
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-16 items-center justify-center lg:text-base xl:text-base 2xl:text-xl ">
@@ -39,8 +47,18 @@ const Navbar = () => {
       {allLink}
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link to='/login' className=" px-6 py-3 rounded-lg cursor-pointer  lg:text-base xl:text-xl bg-gradient-to-r from-[#e944d3] to-[#25baff] drop-shadow-xl shadow-xl  text-black font-semibold">Login</Link>
+  
+  <div className="navbar-end space-x-5 flex  items-center">
+  <div className="flex flex-col justify-center items-center p-5">
+    <div>
+      <img className="w-[50px] rounded-[50%]" src={user?.photoURL} alt="" />
+    </div>
+    <div >
+    <CgProfile className={`${user ? "hidden" : "block text-3xl"}`}></CgProfile>
+    </div>
+    <p className="mt-3">{user?.displayName}</p> 
+  </div>
+   {!user?.displayName ? <Link to='/login' className=" px-6 py-3 rounded-lg cursor-pointer  lg:text-base xl:text-xl bg-gradient-to-r from-[#e944d3] to-[#25baff] drop-shadow-xl shadow-xl  text-black font-semibold">Login</Link> : <button onClick={handleSignOut} className="px-6 py-3 rounded-lg cursor-pointer  lg:text-base xl:text-xl bg-gradient-to-r from-[#e944d3] to-[#25baff] drop-shadow-xl shadow-xl  text-black font-semibold">Sign Out</button>}
   </div>
 </div>
     );

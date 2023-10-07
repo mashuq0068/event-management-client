@@ -5,9 +5,10 @@ import { FaUserEdit } from 'react-icons/fa'
 import { MdMonochromePhotos } from 'react-icons/md'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+
+import toast, { Toaster } from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
-import toast, { Toaster } from "react-hot-toast";
 
 
 const Registration = () => {
@@ -16,9 +17,10 @@ const Registration = () => {
         createUser,
         userWithGoogle,
         userWithGithub, } = useContext(AuthContext)
+        const [name, setName] = useState(null)
+        const [photoUrl, setPhotoUrl] = useState(null)
 
-    const [name, setName] = useState(null)
-    const [photoUrl, setPhotoUrl] = useState(null)
+   
     const handleSubmit = (e) => {
         e.preventDefault()
         const email = e.target.email.value
@@ -56,9 +58,7 @@ const Registration = () => {
                      
                   }
 
-                
-              
-                updateProfile(auth.currentUser, {
+                  updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: photoUrl
                 })
@@ -71,6 +71,11 @@ const Registration = () => {
                        
                         console.error(errorData.code)
                     })
+                 
+
+                
+              
+                
                     
                  navigate('/login') 
                    
@@ -84,21 +89,24 @@ const Registration = () => {
                
                 console.error(error.code)
             })
+            
 
         
     }
     const handleName = (e) => {
+        console.log(e.target.value)
         setName(e.target.value)
 
     }
     const handlePhoto = (e) => {
+        console.log(e.target.value)
         setPhotoUrl(e.target.value)
     }
     const handleGoogle = () => {
         userWithGoogle()
             .then(data => {
                 console.log(data)
-                navigate('/login')
+                navigate('/')
             })
             .catch(error => {
                 toast.error(error.code)
@@ -109,7 +117,7 @@ const Registration = () => {
         userWithGithub()
             .then(data => {
                 console.log(data)
-                navigate('/login')
+                navigate('/')
             })
             .catch(error => {
                 toast.error(error.code)
