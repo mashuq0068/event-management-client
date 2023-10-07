@@ -1,36 +1,42 @@
 {
     "events": [
       {
+        "id":1,
         "eventName": "Annual Business Conference",
         "image": "https://vivauae.com/images/item/171/171074_corporate_event_management_companies_in_dubai_thb.jpg",
         "price": "$299 per ticket",
         "shortDescription": "Join us for our annual business conference, featuring industry experts and thought leaders."
       },
       {
+        "id":2,
         "eventName": "Product Launch Expo",
         "image": "https://www.event-hochiminhcity.com/images/service/DSC_493987.jpg",
-        "price": "Free admission",
+        "price": "$275 per person",
         "shortDescription": "Be the first to see our latest product innovations at our exclusive product launch expo."
       },
       {
+        "id":3,
         "eventName": "Team Building Workshop",
         "image": "https://www.pingpongmoments.in/blog/wp-content/uploads/2022/09/corporate-events-3.jpg",
         "price": "$149 per person",
         "shortDescription": "Enhance team collaboration and productivity with our interactive team building workshop."
       },
       {
+        "id":4,
         "eventName": "Corporate Awards Gala",
         "image": "https://idealwrite.com/wp-content/uploads/2020/07/Event-Management-company-name.jpg",
         "price": "$499 per ticket",
         "shortDescription": "Celebrate excellence in the corporate world at our prestigious awards gala."
       },
       {
+        "id":5,
         "eventName": "Corporate Training Seminar",
         "image": "https://eventmanagementcompany.weddingplannerskerala.com/wp-content/uploads/2018/07/30629782_1690372014342794_6207902449377452811_n.jpg",
         "price": "$199 per attendee",
         "shortDescription": "Gain valuable insights and skills at our corporate training seminar."
       },
       {
+        "id":6,
         "eventName": "Networking Breakfast Meeting",
         "image": "https://coreme.ae/img/Services/services-detail/3-2.jpg",
         "price": "$29 per person",

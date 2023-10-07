@@ -14,11 +14,11 @@ const Banner = () => {
          
          
         
-        <div className="flex flex-col mb-20 lg:text-left text-center  lg:flex-row gap-20 mt-20 items-center px-[2%]">
+        <div className="flex flex-col  lg:text-left text-center  lg:flex-row gap-20 mt-20 items-center px-[2%]">
         <AutoplaySlider
         animation="foldOutAnimation"
     play={true}
-    cancelOnInteraction={false} // should stop playing on user interaction
+    cancelOnInteraction={false} 
     interval={3000}
   >
         

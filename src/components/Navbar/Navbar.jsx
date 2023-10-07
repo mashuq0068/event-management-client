@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {IoLogoTableau} from 'react-icons/io5'
 import "../../index.css"
 
@@ -40,7 +40,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className=" px-6 py-3 rounded-lg cursor-pointer  lg:text-base xl:text-xl bg-gradient-to-r from-[#e944d3] to-[#25baff] drop-shadow-xl shadow-xl  text-black font-semibold">Login</a>
+    <Link to='/login' className=" px-6 py-3 rounded-lg cursor-pointer  lg:text-base xl:text-xl bg-gradient-to-r from-[#e944d3] to-[#25baff] drop-shadow-xl shadow-xl  text-black font-semibold">Login</Link>
   </div>
 </div>
     );
