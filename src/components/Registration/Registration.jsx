@@ -98,8 +98,10 @@ const Registration = () => {
         userWithGoogle()
             .then(data => {
                 console.log(data)
+                navigate('/login')
             })
             .catch(error => {
+                toast.error(error.code)
                 console.error(error.code)
             })
     }
@@ -107,8 +109,10 @@ const Registration = () => {
         userWithGithub()
             .then(data => {
                 console.log(data)
+                navigate('/login')
             })
             .catch(error => {
+                toast.error(error.code)
                 console.error(error.code)
             })
     }
@@ -119,6 +123,7 @@ const Registration = () => {
             <Toaster
                 position="top-right"
                 reverseOrder={false}
+                
             />
             </div>
 

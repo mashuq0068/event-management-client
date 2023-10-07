@@ -3,6 +3,7 @@ import { AiOutlineGoogle } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
@@ -23,6 +24,7 @@ const Login = () => {
            
         })
         .catch(error => {
+            toast.error(`${error.code} dose not match email or password`)
             console.error(error.code)
         })
         
@@ -35,6 +37,7 @@ const Login = () => {
             console.log(data)
         })
         .catch(error => {
+            toast.error(error.code)
             console.error(error.code)
         })
     }
@@ -44,11 +47,19 @@ const Login = () => {
             console.log(data)
         })
         .catch(error => {
+            toast.error(error.code)
             console.error(error.code)
         })
     }
     return (
         <div className="">
+            <div>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+                
+            />
+            </div>
            
 
 
