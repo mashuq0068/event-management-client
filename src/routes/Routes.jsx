@@ -6,6 +6,8 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegistrationPage from "../Pages/RegistrationPage/RegistrationPage";
 import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import PreviousDealsPage from "../Pages/PreviousDealsPage/PreviousDealsPage";
+import FaqPage from "../Pages/FaqPage/FaqPage";
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
             element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
             loader: ({params}) => fetch(`/services.json/${params.id}`)
 
+        },
+        {
+            path:'/previousDeals',
+            element:<PrivateRoute><PreviousDealsPage></PreviousDealsPage></PrivateRoute>
+        },
+        {
+            path:'/faq',
+            element:<PrivateRoute><FaqPage></FaqPage></PrivateRoute>
         }
        ]
     }

@@ -1,4 +1,5 @@
 import toast, { Toaster } from "react-hot-toast";
+import { setItemToLS } from "../../js/previousDeals";
 
 
 
@@ -18,8 +19,9 @@ const Detail = ({oneClickedData}) => {
         contactEmail} = oneClickedData
         const handleBookNow = () =>{
             toast.success("You have success fully booked our service. we will start our working for your event very soom")
-
+            setItemToLS(id)
         }
+        
     
     return (
         <>

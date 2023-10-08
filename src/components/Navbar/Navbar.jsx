@@ -18,8 +18,8 @@ const Navbar = () => {
     <>
     <div className="flex flex-col lg:flex-row gap-5 lg:gap-16 items-center justify-center lg:text-base xl:text-base 2xl:text-xl ">
     <NavLink to='/'>Home</NavLink>
-    <NavLink to='/another'>Home</NavLink>
-    <NavLink to='/anoteh'>Home</NavLink>
+    <NavLink to='/previousDeals'>Previous Deals</NavLink>
+    <NavLink to='/faq'>Faq</NavLink>
     </div>
     </>
     return (
