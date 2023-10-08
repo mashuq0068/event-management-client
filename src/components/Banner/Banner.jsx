@@ -19,7 +19,7 @@ const Banner = () => {
         animation="foldOutAnimation"
     play={true}
     cancelOnInteraction={false} 
-    interval={3000}
+    interval={2000}
   >
         
        

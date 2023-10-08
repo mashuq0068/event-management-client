@@ -28,7 +28,7 @@ const Detail = ({oneClickedData}) => {
                 reverseOrder={false}
                 
             />
-       <div className="flex justify-center gap-10"> 
+       <div className="flex lg:flex-row flex-col justify-center gap-10"> 
          {/* left */}
        <div>
        <div>
