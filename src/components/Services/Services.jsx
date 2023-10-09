@@ -16,7 +16,7 @@ const Services = () => {
   },[])
   return (
     <div data-aos-duration="1000" data-aos="fade-up" className="lg:mb-36 mb-12">
-    <div className="text-center text-2xl md:text-2xl font-semibold  lg::3xl 2xl:text-4xl mb-8  lg:mb-16">
+    <div className="text-center text-2xl md:text-2xl font-semibold  lg:3xl 2xl:text-4xl mb-8  lg:mb-16">
       <h3>Our Services</h3>
       
     </div>

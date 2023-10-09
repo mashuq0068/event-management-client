@@ -1,7 +1,7 @@
 ###                                           Project Details
 
-#### Website Name : Corporate Event Manager
-#### Website link : 
+1. Website Name : Corporate Event Manager
+2. Website link :  https://console.firebase.google.com/project/corporate-event-manager/overview
 
 ###                                           Project Features
 

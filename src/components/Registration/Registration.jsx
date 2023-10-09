@@ -172,7 +172,7 @@ const Registration = () => {
 
                     </form >
                     <div className="mt-10 space-y-5 text-center">
-                        <button onClick={handleGoogle} className="text-red xl:text-base 2xl:text-xl  text-center hover:before:bg-red rounded-lg font-semibold  relative py-3 w-full overflow-hidden border border-blue-500 bg-white px-3 text-blue-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-200 hover:text-white hover:shadow-blue-500 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className='text-xl'><AiOutlineGoogle></AiOutlineGoogle></span> Login with Goggle</span></button>
+                        <button onClick={handleGoogle} className="text-red xl:text-base 2xl:text-xl  text-center hover:before:bg-red rounded-xl font-semibold  relative py-3 w-full overflow-hidden border border-blue-500 bg-white px-3 md:px-16 text-blue-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-200 hover:text-white hover:shadow-blue-500 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className='text-xl'><AiOutlineGoogle></AiOutlineGoogle></span>Continue with Goggle</span></button>
 
 
 
