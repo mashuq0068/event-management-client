@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from 'react-icons/ai';
-import { BsGithub } from 'react-icons/bs';
 import { FaUserEdit } from 'react-icons/fa'
 import { MdMonochromePhotos } from 'react-icons/md'
 import { useContext, useState } from "react";
@@ -16,7 +15,7 @@ const Registration = () => {
     const {
         createUser,
         userWithGoogle,
-        userWithGithub, } = useContext(AuthContext)
+         } = useContext(AuthContext)
         const [name, setName] = useState(null)
         const [photoUrl, setPhotoUrl] = useState(null)
 
@@ -113,17 +112,7 @@ const Registration = () => {
                 console.error(error.code)
             })
     }
-    const handleGithub = () => {
-        userWithGithub()
-            .then(data => {
-                console.log(data)
-                navigate('/')
-            })
-            .catch(error => {
-                toast.error(error.code)
-                console.error(error.code)
-            })
-    }
+   
     return (
         <div className="">
 
@@ -183,11 +172,11 @@ const Registration = () => {
 
                     </form >
                     <div className="mt-10 space-y-5 text-center">
-                        <button onClick={handleGoogle} className="text-red xl:text-base 2xl:text-xl   text-center hover:before:bg-red rounded-lg font-semibold  relative py-3 w-full overflow-hidden border border-blue-500 bg-white px-3 text-blue-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-200 hover:text-white hover:shadow-blue-500 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className='text-xl'><AiOutlineGoogle></AiOutlineGoogle></span> Login with Goggle</span></button>
+                        <button onClick={handleGoogle} className="text-red xl:text-base 2xl:text-xl  text-center hover:before:bg-red rounded-lg font-semibold  relative py-3 w-full overflow-hidden border border-blue-500 bg-white px-3 text-blue-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-200 hover:text-white hover:shadow-blue-500 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className='text-xl'><AiOutlineGoogle></AiOutlineGoogle></span> Login with Goggle</span></button>
 
 
 
-                        <button onClick={handleGithub} className="text-red text-center hover:before:bg-red rounded-lg font-semibold  relative w-full xl:text-base 2xl:text-xl py-3 overflow-hidden border border-gray-900 bg-white px-3 text-gray-900 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gray-900 before:transition-all before:duration-200 hover:text-white hover:shadow-gray-900 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className='text-xl'><BsGithub></BsGithub></span> Login with Github</span></button>
+                        
                     </div>
 
                 </div>

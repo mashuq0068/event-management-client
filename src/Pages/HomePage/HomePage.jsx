@@ -5,12 +5,15 @@ import Trusted from "../../components/Trusted/Trusted";
 import VirtualExperience from "../../components/VirtualExperience/VirtualExperience";
 
 
+
 const HomePage = () => {
+   
+
     return (
     <div className="">
         <Banner></Banner>
-        <Services></Services>
         <VirtualExperience></VirtualExperience>
+        <Services ></Services>
         <Trusted></Trusted>
         <Footer></Footer>
     </div>

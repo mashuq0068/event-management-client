@@ -21,7 +21,7 @@ console.log(greetign);
 #### Answer: A
 
 <i>
-At first ,when greeting declared there was no value. So it was undefined , but when the second line assigned greeting and gave the value an empty object.Now after console.log result should be an empty object
+At first ,when greeting declared there was no value. So it was undefined , but when in the second line assigned greeting and gave the value of an empty object.Now after console.log result should be an empty object
 </i>
  
 </p>
@@ -99,7 +99,7 @@ console.log(sayHi());
 #### Answer:B
 
 <i>
-There is a function called sayHi and there is a parameter name when function will be called with an argument the result will "Hi there,argument value" But when function will be called without argument must be show undefined.So, the result is"Hi, there undefined".</i>
+There is a function called sayHi and there is a parameter name when function will be called with an argument the result will "Hi there,argument value" But when function will be called without argument must be show undefined.So, the result is "Hi, there undefined".</i>
 
 </p>
 </details>
@@ -127,7 +127,7 @@ console.log(count);
 
 #### Answer:C
 
-<i>There is a variable called count and value is 0 . and an array called nums which has 4 elements . And forEach  when applied on nums it will check if the value is truthy(not zero) then 1 should be added with num. So , from this position the condition will match with last three values except first value(0).For the addition will be applied 3 times with count. So ,the answer should be 3. </i>
+<i>There is a variable called count and value is 0 . and an array called nums which has 4 elements. And forEach  when applied on nums it will check if the value is truthy(not zero) then 1 should be added with num. So , from this position the condition will match with last three values except first value(0).For the addition will be applied 3 times with count. So ,the answer should be 3.</i>
 
 </p>
 </details>

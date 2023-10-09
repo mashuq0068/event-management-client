@@ -1,6 +1,6 @@
-import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from 'react-icons/ai';
-import { BsGithub } from 'react-icons/bs';
+
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
@@ -14,7 +14,7 @@ const Login = () => {
     const { 
         loginUser,
         userWithGoogle,
-        userWithGithub,} =useContext(AuthContext)
+      } =useContext(AuthContext)
         
 
     
@@ -50,17 +50,8 @@ const Login = () => {
             console.error(error.code)
         })
     }
-    const handleGithub = () => {
-        userWithGithub()
-        .then(data => {
-            console.log(data)
-            navigate(location?.state ? location.state: "/")
-        })
-        .catch(error => {
-            toast.error(error.code)
-            console.error(error.code)
-        })
-    }
+    
+    
     return (
         <div className="">
             <div>
@@ -113,7 +104,7 @@ const Login = () => {
                     
 
 
-                    <button onClick={handleGithub} className="text-red text-center hover:before:bg-red rounded-lg font-semibold  relative w-full xl:text-base 2xl:text-xl py-3 overflow-hidden border border-gray-900 bg-white px-3 text-gray-900 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gray-900 before:transition-all before:duration-200 hover:text-white hover:shadow-gray-900 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className='text-xl'><BsGithub></BsGithub></span> Login with Github</span></button>
+                    
          </div>
        
       </div>
