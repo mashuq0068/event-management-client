@@ -1,5 +1,5 @@
-import toast, { Toaster } from "react-hot-toast";
-import { setItemToLS } from "../../js/previousDeals";
+
+import { Link } from "react-router-dom";
 
 
 
@@ -17,19 +17,16 @@ const Detail = ({oneClickedData}) => {
         capacity,
         agendaLink,
         contactEmail} = oneClickedData
-        const handleBookNow = () =>{
-            toast.success("You have success fully booked our service. we will start our working for your event very soom")
-            setItemToLS(id)
-        }
+        
         
     
     return (
         <>
-        <Toaster 
+        {/* <Toaster 
                 position="top-right"
                 reverseOrder={false}
                 
-            />
+            /> */}
        <div className="flex lg:flex-row flex-col justify-center gap-10"> 
          {/* left */}
        <div>
@@ -55,8 +52,10 @@ const Detail = ({oneClickedData}) => {
           <p className="p-2 text-gray-500"><span className="font-bold font-xl text-black">Agenda Link</span> : {agendaLink}</p>
           <p className="p-2 text-gray-500"><span className="font-bold font-xl text-black">Contact Email </span>: {contactEmail}</p>
           <p className="p-2 text-gray-500"><span className="font-bold font-xl text-black">Price </span>: {price}</p>
-          <button onClick={handleBookNow} to={`/details/${id}`}  className="relative  left-0  top-3 text-red flex items-center justify-center mt-5 hover:before:bg-redborder-red-500  w-full py-2 overflow-hidden border  border-purple-500  rounded-md font-semibold  bg-white px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r from-[#e944d3] to-[#25baff]  before:transition-all before:duration-100 hover:text-black hover:border-none hover:before:left-0 hover:shadow-purple-500 hover:before:w-full">
+        <Link to={`/booking/${id}`}>
+        <button  className="relative  left-0  top-3 text-red flex items-center justify-center mt-5 hover:before:bg-redborder-red-500  w-full py-2 overflow-hidden border  border-purple-500  rounded-md font-semibold  bg-white px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r from-[#e944d3] to-[#25baff]  before:transition-all before:duration-100 hover:text-black hover:border-none hover:before:left-0 hover:shadow-purple-500 hover:before:w-full">
         <span className="relative z-10">Book Now</span></button>
+        </Link>
         </div>
        </div>
         </>

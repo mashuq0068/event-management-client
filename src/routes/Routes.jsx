@@ -8,6 +8,7 @@ import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import PreviousDealsPage from "../Pages/PreviousDealsPage/PreviousDealsPage";
 import FaqPage from "../Pages/FaqPage/FaqPage";
+import BookingPage from "../Pages/BookingPage/BookingPage";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         {
             path:'/faq',
             element:<PrivateRoute><FaqPage></FaqPage></PrivateRoute>
+        },
+        {
+            path:'/booking/:id',
+            element:<PrivateRoute><BookingPage></BookingPage></PrivateRoute>
         }
        ]
     }

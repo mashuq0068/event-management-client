@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import { getItemsToLs } from "../../js/previousDeals";
+
 import PreviousDeal from "../PreviousDeal/PreviousDeal";
 
 
 const PreviousDeals = () => {
-    const[services , setServices] = useState([])
-    const previousDealsIds = getItemsToLs()
-    console.log(previousDealsIds)
+    const[bookings ,setBookings] = useState([])
+   
+    
     useEffect(()=>{
-        fetch('/services.json')
+        fetch('http://localhost:5000/bookings')
         .then(res => res.json())
-        .then(data  => setServices(data.events))
+        .then(data  => setBookings(data))
 
     },[])
-    const previousDeals = services.filter ((service) => previousDealsIds.includes(service.id) )
-    console.log(previousDeals)
+   
+  
     
     return (
         <div className="lg:p-0 p-[5%] mb-36">
@@ -25,7 +25,23 @@ const PreviousDeals = () => {
             <div className="mt-7 lg:mt-16">
                 <h3 className="2xl:text-3xl text-2xl font-bold text-center">Previous Deals</h3>
                 <p className="text-center text-gradient  font-extrabold">______________________________________________</p>
-            {previousDeals.length === 0 ? <p className="text-4xl text-center mt-5 lg:mt-16 text-gray-500">You did not any deal with us at past</p>:previousDeals.map((previousDeal , i )=> <PreviousDeal i={i} key={previousDeal.id} previousDeal={previousDeal}></PreviousDeal>)}
+            {bookings?.length === 0 ? <p className="text-4xl text-center mt-5 lg:mt-16 text-gray-500">You did not any deal with us at past</p>:
+            <div>
+                <div className=" grid mt-[1%]  py-2 lg:py-4 drop-shadow-xl shadow-lg shadow-purple-300 grid-cols-6 2xl:text-xl font-bold text-gray-700 justify-items-center ">
+                  <h3>No</h3>
+                  <h3>Event Name</h3>
+                  <h3>Event Type</h3>
+                  <h3>Booking Date</h3>
+                  <h3>Event Date</h3>
+                  <h3>Details</h3>
+                </div>
+
+              <div>
+              {  bookings?.map((previousDeal , i )=> <PreviousDeal i={i} key={previousDeal.id} previousDeal={previousDeal}></PreviousDeal>)}
+              </div>
+
+            </div>
+                }
             </div>
         </div>
     );

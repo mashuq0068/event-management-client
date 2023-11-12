@@ -6,8 +6,8 @@ const Service = ({service}) => {
     console.log(service)
     const{eventName , image , price ,shortDescription , id} = service
     return (
-        <div>
-            <div className=" drop-shadow-xl hover:shadow-black shadow-xl">
+        <div className=" ">
+            <div className=" drop-shadow-xl duration-1000 hover:shadow-black shadow-xl">
   <figure className="lg:px-10">
     <div >
     <img  src={image} alt="Shoes" className="rounded-xl h-auto md:h-auto lg:h-[274px] w-[100%]" />
