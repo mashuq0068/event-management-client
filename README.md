@@ -1,9 +1,16 @@
-###                                           Project Details
+### Project Details
 
 1. Website Name : Corporate Event Manager
 2. Website link : https://corporate-event-manager.web.app
 
-###                                           Project Features
+## Technologies:
+- React
+- Tailwind
+- Javascript
+- React router
+- Firebase
+
+### Project Features
 
 - The website represents a company which provides corporate event management services.
 - They have six types of services.So, you can book any services from details page.
