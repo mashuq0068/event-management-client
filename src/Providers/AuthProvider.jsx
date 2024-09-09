@@ -1,4 +1,4 @@
-import  { createContext, useEffect, useState } from "react";
+import  { createContext, useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../firebase/firebase.config";
@@ -43,6 +43,13 @@ const AuthProvider = ({ children }) => {
             unsubscribe()
         })
     },[])
+
+    const bannerRef = useRef(null);
+  
+    const scrollToBanner = (ref) => {
+     ref.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
   const authInfo = 
   {
     createUser,
@@ -51,7 +58,9 @@ const AuthProvider = ({ children }) => {
     userWithGoogle,
     userWithGithub,
     user,
-    loading
+    loading,
+    bannerRef,
+    scrollToBanner,
 };
 
   return (

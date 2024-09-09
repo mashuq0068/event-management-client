@@ -1,31 +1,26 @@
 
-import AwesomeSlider from 'react-awesome-slider';
-import "react-awesome-slider/dist/styles.css";
-import 'react-awesome-slider/dist/custom-animations/fold-out-animation.css';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import { useEffect } from "react";
+import Aos from "aos";
+
 
 
 
 
 
 const Banner = () => {
-    const AutoplaySlider = withAutoplay(AwesomeSlider);
-    const handelGetStarted = () => {
-        window.scrollTo(0, window.innerHeight*3);
-    }
+    
+    
+    useEffect(()=>{
+        Aos.init()
+    },[])
     
     return (
-        <>
+        <div className="lg:mt-[50vh]">
          
          
         
-        <div className="flex flex-col  lg:text-left text-center  lg:flex-row gap-20 mt-20 items-center px-[2%]">
-        <AutoplaySlider
-        animation="foldOutAnimation"
-    play={true}
-    cancelOnInteraction={false} 
-    interval={2000}
-  >
+        <div data-aos-duration="1000" data-aos="fade-up"  className="flex flex-col  lg:text-left text-center  lg:flex-row gap-20 mt-20 items-center px-[2%] lg:px-[5%]">
+        
         
        
     
@@ -34,28 +29,21 @@ const Banner = () => {
        <div>
         <img src="https://www.daeventz.com/images/Event-management-companies.jpg" />
         </div>
-        <div>
-       <img src="https://voloevents.com/wp-content/uploads/2016/06/Corporate-Management-and-Production-Lead.jpg" alt="" />
-        </div>
-        <div>
-       <img src="https://www.sublimeeventdesigns.com/wp-content/uploads/2017/08/orlando-Corporate-Event-Management-Company.jpg " alt="" />
-        </div>
+        
       
         
-        </AutoplaySlider>
+      
 
       {/* </div> */}
         {/* div */}
-        <div className="space-y-7 ">
-            <div className=" font-bold text-5xl   ">
-            Best  Corporate Event Management Company
-            </div>
-            <button onClick={handelGetStarted} className="text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border  border-purple-500  rounded-xl font-semibold text-xl bg-white px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r from-[#e944d3] to-[#25baff]  before:transition-all before:duration-100 hover:text-black hover:border-none hover:before:left-0 hover:shadow-purple-500 hover:before:w-full"><span className="relative z-10  ">Get-started</span></button>
+        <div className="w-[90%] mx-auto lg:w-[50%]">
+            <h1 className=" 2xl:text-3xl text-2xl  font-bold text-center mb-5">Our Mission</h1>
+            <p className="text-gray-600  font-thin 2xl:text-lg">At CEM, we specialize in crafting exceptional corporate events that leave a lasting impression. Our mission is to seamlessly blend creativity and precision, ensuring each gathering exceeds expectations. Join us in transforming ordinary moments into extraordinary experiences. Whether it is a conference, team-building retreat, or product launch, we are dedicated to crafting moments that leave a lasting impression, fostering collaboration, and inspiring success. Join us in transforming ordinary events into extraordinary memories that resonate long after the last guest has departed</p>
         </div>
         </div>
-        {/* faltu */}
+       
         
-        </>
+        </div>
     );
 };
 

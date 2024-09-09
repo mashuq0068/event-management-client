@@ -6,9 +6,9 @@ const Footer = () => {
         
 <div className="bg-gray-900 mt-36 ">
     <div className="max-w-2xl mx-auto text-white py-10">
-        <h3 className="text-gradient font-bold text-3xl md:text-4xl text-center mt-10 mb-10">We always ready for you</h3>
+        <h3 className="text-gradient font-bold text-2xl md:text-4xl text-center mt-10 mb-10">We always ready for you</h3>
         <div className="text-center">
-            <h3 className="text-3xl mb-3 "> Download our mobile app </h3>
+            <h3 className="md:text-3xl text-2xl mb-3 "> Download our mobile app </h3>
             <p> Stay fit. All day, every day. </p>
             <div className="flex justify-center my-10">
                 <div className="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
